@@ -1,0 +1,18 @@
+{
+  "name": "kodnestcareers-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:worker": "turbo run dev --filter=worker",
+    "dev:local": "pnpm run docker:up && pnpm dev",
+    "docker:up": "docker compose -f docker-compose.local.yml up -d",
+    "docker:down": "docker compose -f docker-compose.local.yml down",
+    "docker:reset": "docker compose -f docker-compose.local.yml down -v"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

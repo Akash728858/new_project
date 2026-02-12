@@ -1,0 +1,11 @@
+// Minimal Prisma schema placeholder for KodNestCareers.
+// Extend this with actual models later.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
